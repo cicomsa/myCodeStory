@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>gettingFit!</title>
+  </head>
+  <body>
+    <script>
+
+      var age = parseInt(prompt('What is your age?'));
+      var height = parseInt(prompt('What is your height in centimeters?'));
+      var weight = parseInt(prompt('What is your weight?'));
+      var gender = prompt('What is your gender(m/f)?').toLowerCase();
+      var exerciseLevel = parseInt(prompt('Rate your exercise level with a number between 1 and 5:'));
+      var heightInMeters = height / 100;
+      var bmi = weight / (heightInMeters ** 2);
+      var idealWeight = (0.5 * bmi + 11.5) * (heightInMeters ** 2);
+      var bmr = 10.0 * weight + 6.25 * height - 5.0 * age;
+      var caloriesIdealWeight = 10.0 * idealWeight + 6.25 * height - 5.0 * age;
+
+      //BMR
+      if (gender === 'm') {
+        bmr += 5;
+      }
+      if (gender === 'f') {
+        bmr -= 161;
+      }
+
+      /*Number of calories to mainain weight
+      Number of calories - Ideal weight*/
+      if (exerciseLevel === 1) {
+        caloriesToMaintainWeight = bmr * 1.2;
+        caloriesIdealWeight *= 1.2;
+      } else if (exerciseLevel === 2) {
+        caloriesToMaintainWeight = bmr * 1.375;
+        caloriesIdealWeight *= 1.375;
+      } else if (exerciseLevel === 3) {
+        caloriesToMaintainWeight = bmr * 1.55;
+        caloriesIdealWeight *= 1.55;
+      } else if (exerciseLevel === 4) {
+        caloriesToMaintainWeight = bmr * 1.725;
+        caloriesIdealWeight *= 1.725;
+      } else if (exerciseLevel === 5) {
+        caloriesToMaintainWeight = bmr * 1.9;
+        caloriesIdealWeight *= 1.9;
+      }
+
+      //Number of calories to lose and in number of weeks
+      if (weight > idealWeight) {
+        dietCaloriesPerDay = caloriesToMaintainWeight - 500;
+        dietWeeks = (weight - idealWeight) / 0.5;
+      } else {
+        dietCaloriesPerDay = caloriesToMaintainWeight + 500;
+        dietWeeks = (idealWeight - weight) / 0.5;
+      }
+
+      document.write(`Ideal weight: ${idealWeight.toFixed(2)} kg`);
+      document.write("<br>");
+
+      document.write(`Calories to maintain current weight: ${parseInt(caloriesToMaintainWeight)} calories`);
+      document.write("<br>");
+
+      document.write(`Calories to lose weight: ${parseInt(dietCaloriesPerDay)} calories for ${dietWeeks.toFixed(2)} weeks`);
+      document.write("<br>");
+
+      document.write(`Calories to maintain ideal weight: ${parseInt(caloriesIdealWeight)} calories`)
+
+    </script>
+  </body>
+  <footer>
+    <p><a href ='./myCodeStory.html'><< back to my main Code Story page</a></p>
+  </footer>
+</html>
