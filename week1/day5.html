@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Application</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="welcome_screen">
+    <h1>Welcome, choose your username:</h1>
+    <form id="welcome_form">
+      Username:<br>
+      <input type="text" name="username" id="username" />
+      <br />
+      <input type="submit" value="Enter" />
+    </form>
+  </div>
+  <div id='chatRoom'>
+  </div>
+  <div class="sendBox">
+    <form>
+      Message:<br>
+      <textarea id="textSendMessageFrom"rows="4" cols="50"></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+  <div id='activeUsers'>
+    <h1>Active Users</h1>
+
+  </div>
+
+  <!-- Put your code in the chat.js file -->
+  <script src="./day5.js"></script>
+</body>
+
+</html>
