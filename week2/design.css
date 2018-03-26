@@ -1,0 +1,60 @@
+
+.wrapper {
+  display: grid;
+  border: 1px solid #333;
+
+  min-height: 800px;
+}
+
+.box1 {
+  background: red;
+  grid-column: 1 /span 4;
+  grid-row: 1 / span 1;
+
+}
+
+.box2 {
+  background: yellow;
+  grid-column: 1 /span 3;
+  grid-row: 2 / span 4;
+  background-color: yellow;
+
+}
+
+
+.box3 {
+  background: green;
+  grid-column: 4 /span 1;
+  grid-row: 2 / span 2;
+}
+
+
+.box4 {
+  background: blue;
+  grid-column: 4 /span 1;
+  grid-row: 4 / span 2
+}
+
+
+.box5 {
+  grid-column: 1 /span 4;
+
+}
+
+
+.box6 {
+  background: orange;
+  grid-column: 1 /span 2;
+}
+
+
+.box7 {
+  background: purple;
+  grid-column: 3 /span 2;
+}
+
+
+.box8 {
+  background: green;
+  grid-column: 1 /span 4;
+}
