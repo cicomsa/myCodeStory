@@ -8,17 +8,12 @@ var images = ["./annie-spratt-44241-unsplash.jpg", "./annie-spratt-109237-unspla
 
 window.onload = function () {
   image = document.createElement('img');
-  //image.id = "image2"
+  image.id = "image2"
 
   image.src = images[4];
   source=document.getElementsByClassName("box2")
   $("#image1").replaceWith(image)
-  //img = document.querySelector("#image1")
-
-  //img = image
-  //source.class = "image1"
   console.log(source)
-  //console.log(image);
-  //console.log(img)
+
 
     };
