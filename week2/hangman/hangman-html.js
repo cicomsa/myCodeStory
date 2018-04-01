@@ -40,4 +40,4 @@ function next(word, guesses) {
   }
 }
 
-next("hello", letterArray)
+next(word, letterArray)
