@@ -11,7 +11,7 @@ function showGuess(word, guesses) {
   return guessArray
 }
 
-function next(word, guesses) {
+function play(word, guesses) {
 
   const dashes = "_ ".repeat(word.length)
   let tries = 0

@@ -11,7 +11,7 @@ function showGuess(word, guesses) {
   return guessArray
 }
 
-function next(word, guesses) {
+function play(word, guesses) {
 
   const readline = require('readline')
   const rl = readline.createInterface({
@@ -44,4 +44,4 @@ function next(word, guesses) {
   recursiveAsyncReadLine();
 }
 
-next(word, letterArray)
+play(word, letterArray)

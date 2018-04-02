@@ -1,19 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
-body {
 
-  font-family: 'Special Elite', cursive;
+body {
+  border: 2px solid #333;
 }
 
-
-#guessWord {
+a {
+  font-family: 'Special Elite', cursive;
   width: 450px;
   text-align: center;
   position: fixed;
-  top: 44%;
-  left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 4px 4px 4px #aaa;
+}
+
+#guessWord {
+  top: 42%;
+  left: 50%;
   font-size: 50px;
   color:blue;
 }
@@ -26,16 +29,10 @@ body {
 
 #newWord {
   font-size: 25px;
-  width: 450px;
-  text-align: center;
-  position: fixed;
-  top: 50%;
+  top: 48%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 4px 4px 4px #aaa;
   color: purple
 }
-
 #newWord:hover {
     color: black;
 }
