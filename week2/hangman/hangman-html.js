@@ -42,8 +42,6 @@ function next(word, guesses) {
       answer = prompt("Word to guess: " + guessed + "\nInput letters: " + letterArray + "\nInput letter:")
       game()
     }
-    alert("Game over")
+    alert("Game over!")
   }
-
 }
-//next(word, letterArray)
