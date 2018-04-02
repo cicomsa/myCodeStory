@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+#title {
+  width: 450px;
+  text-align: center;
+  position: fixed;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 4px 4px 4px #aaa;
+  font-size: 50px;
+  font-family: 'Special Elite', cursive;
+  color:blue;
+}
+
+#title:hover {
+    color: red;
+}
+#title:active {
+  color: blue;
+}

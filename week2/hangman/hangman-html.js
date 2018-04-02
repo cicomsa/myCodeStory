@@ -21,27 +21,29 @@ function next(word, guesses) {
     letterArray += answer
     guessed = showGuess(word, letterArray)
     tries++
+
     if (guessed.indexOf("_") == -1 && tries < 6) {
-      window.alert("You won!")
+      alert("You won!")
     } else if (guessed.indexOf("_") >= 0 && tries >= 6) {
-      window.alert("You lost!\nWord: "+word)
+      alert("You lost!\nWord: "+word)
     } else if (answer === word) {
-      window.alert("You won!")
+      alert("You won!")
+    } else if (answer === "") {
+      alert("No letter in. One try lost")
     }
   }
 
-  answer = window.prompt("Word to guess: " + dashes + "\nInput letter or write 'exit' to end the game:")
-  if (answer === 'exit') {
-    window.alert("Game over")
+  answer = prompt("Word to guess: " + dashes + "\nInput letter or write 'exit' to end the game:")
+  if (answer === 'exit' || answer === null) {
+    alert("Game over")
   } else {
     game()
-    while (guessed.indexOf("_") >= 0 && tries < 6) {
-      answer = window.prompt("Word to guess: " + guessed + "\nInput letters: " + letterArray + "\nInput letter:")
+    while (guessed.indexOf("_") >= 0 && tries < 6 && answer !== "exit"  && answer !== null) {
+      answer = prompt("Word to guess: " + guessed + "\nInput letters: " + letterArray + "\nInput letter:")
       game()
     }
+    alert("Game over")
   }
 
 }
-
-
-next(word, letterArray)
+//next(word, letterArray)
